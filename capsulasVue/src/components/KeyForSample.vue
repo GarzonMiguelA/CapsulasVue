@@ -1,6 +1,7 @@
 <script setup>
-import { shuffle } from 'lodash'
+//import { shuffle } from 'lodash'
 import { ref } from 'vue'
+import { shuffle } from 'lodash'
 
 const items = ref([
   { id: 1, label: 'first name' },
@@ -16,7 +17,7 @@ function shuffleItems() {
 
 <template>
   <ul>
-    <li v-for="item in items" >{{ item.label }} 
+    <li v-for="item in items" :key="item.id" >{{ item.label }}  <!-- Quita la key del for y prueba -->
         <input type="text" /></li>
   </ul>
   <button @click="shuffleItems">Shuffle</button>
