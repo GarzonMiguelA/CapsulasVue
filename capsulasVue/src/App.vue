@@ -1,19 +1,22 @@
 <script setup>
+import { RouterView } from 'vue-router';
 import KeyForSample from './components/KeyForSample.vue'
 import WatchArrayExample from './components/WatchArrayExample.vue'
+import LaOtraView from './views/LaOtraView.vue';
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      
     </div>
-  </header>
+  </header> -->
 
-  <main>
-    <KeyForSample />
+  <main >
+    <RouterView/>
+    
   </main>
 </template>
 
