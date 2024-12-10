@@ -11,6 +11,7 @@
 
 <template>
     <div>
+        <p>Ahora estas en HomeView</p>
         <button @click="goToAbout">Ves a About</button> //Esto te lleva la otra vue
     </div>
 </template>

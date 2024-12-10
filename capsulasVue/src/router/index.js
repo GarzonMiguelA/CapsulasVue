@@ -11,6 +11,10 @@ const routes = [
         path:'/about',
         name:'about',
         component: LaOtraView
+    },{
+        path:'/desti/:id',
+        name:'desti',
+        component: ()=>import('../components/Desti.vue')
     }
 ]
 

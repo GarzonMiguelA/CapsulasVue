@@ -2,49 +2,85 @@
 import { RouterView } from 'vue-router';
 import KeyForSample from './components/KeyForSample.vue'
 import WatchArrayExample from './components/WatchArrayExample.vue'
-import LaOtraView from './views/LaOtraView.vue';
+import LaOtraView from './views/LaOtraView.vue'; 
+import NombreApellido from './components/NombreApellido.vue';
+import PrecioProducto from './components/PrecioProducto.vue';
+import Desti from './components/Desti.vue';
+
 </script>
 
+
+
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      
-    </div>
-  </header> -->
-
-  <main >
-    <RouterView/>
+  <div class="container">
+    <h1>All examples</h1>
     
-  </main>
+    <div class="example">
+      <h3>Importancia de usar key en el for</h3>
+      <p>KeyForSample:</p>
+      <KeyForSample />
+    </div>
+    
+    <div class="example">
+      <h3>Importancia de watch</h3>
+      <p>WatchArrayExample</p>
+      <WatchArrayExample/>
+    </div>
+    
+    <div class="example">
+      <h3>Importancia de routerview</h3>
+      <p>RouterView</p>
+      <RouterView/>
+    </div>
+    
+    <div class="example">
+      <h3>Importancia de propiedad computed</h3>
+      <p>NombreApellido</p>
+      <NombreApellido />
+    </div>
+    
+    <div class="example">
+      <h3>Importancia de propiedad computed</h3>
+      <p>PrecioProducto</p>
+      <PrecioProducto/>
+    </div>
+    
+    <div class="example">
+      <h3>Importancia de vue router para navegar entre diferentes rutas</h3>
+      <p>Desti</p>
+      <Desti />
+    </div>
+  </div>
 </template>
 
+
+
 <style scoped>
-header {
-  line-height: 1.5;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; /* Espacio entre los componentes */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.example {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+h1 {
+  text-align: center;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+h3 {
+  margin-bottom: 0.5rem;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+p {
+  margin-bottom: 1rem;
 }
 </style>

@@ -1,12 +1,10 @@
 <script setup>
-import { ref, watch } from 'vue'
+  import { ref, watch } from 'vue'
 
-const numbers = ref([])
+  const numbers = ref([])
 
-// Corregir la sintaxis del watch
-watch(numbers, (numbers) => console.log(numbers), {deep:true})
-
-const randomNum = () => numbers.value.push((Math.random()*100).toFixed(0))
+  watch(numbers, (newNumbers) => console.log(newNumbers), { deep: true })
+  const randomNum = () => numbers.value.push((Math.random()*100).toFixed(0))
 
 </script>
 

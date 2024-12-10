@@ -12,6 +12,7 @@ const items = ref([
   { id: 4, label: 'website' }
 ])
 
+// Gracias a watch podemos ver cambios en la variable (en este caso text) y muestra en consola los valores nuevos y antiguos
 watch(text, (newText, oldText) => console.log(newText, oldText))
 
 function shuffleItems() {
@@ -20,22 +21,11 @@ function shuffleItems() {
 </script>
 
 <template>
-  <!-- <ul>
-    <li v-for="item in items" :key="item.id" >{{ item.label }}  -->
-        <input type="text" v-model="text"/><!-- <li> -->
-  <!-- </ul> -->
+  <ul>
+    <li v-for="item in items" :key="item.id">
+      {{ item.label }}
+      <input type="text" v-model="item.value" />
+    </li>
+  </ul>
   <button @click="shuffleItems">Shuffle</button>
 </template>
-
-<style>
-ul {
-  padding: 0;
-  padding-right: 10px;
-  margin: 0;
-  margin-bottom: 10px;
-  list-style: none;
-}
-input {
-  max-width: 100%;
-}
-</style>
